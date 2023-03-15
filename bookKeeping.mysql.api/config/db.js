@@ -32,7 +32,7 @@ function exec(sql, params = []) {
             }
             resolve(res);
         });
-        logger.info(res.sql);
+        // logger.info(res.sql);
     });
     return myPromise;
 }

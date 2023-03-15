@@ -1,11 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../components/Home.vue';
 import storage from '../utils/storage';
-const routes = [
-    {
+const routes = [{
         name: 'system',
         path: '/',
-        // redirect: '/system',
+        redirect: '/system',
         meta: {
             title: '首页',
         },
@@ -17,11 +16,11 @@ const routes = [
             }
         },
         component: Home,
-        children: [
-            {
+        children: [{
                 name: 'welcome',
                 path: '/system',
-                component: () => import('../views/welcome/index.vue'),
+                component: () =>
+                    import ('../views/welcome/index.vue'),
                 meta: {
                     title: '欢迎页',
                 },
@@ -29,7 +28,8 @@ const routes = [
             {
                 name: 'users',
                 path: '/users',
-                component: () => import('../views/users/index.vue'),
+                component: () =>
+                    import ('../views/users/index.vue'),
                 meta: {
                     title: '用户管理',
                 },
@@ -37,7 +37,8 @@ const routes = [
             {
                 name: 'bills',
                 path: '/bills',
-                component: () => import('../views/bills/index.vue'),
+                component: () =>
+                    import ('../views/bills/index.vue'),
                 meta: {
                     title: '账单管理',
                 },
@@ -45,7 +46,8 @@ const routes = [
             {
                 name: 'categories',
                 path: '/categories',
-                component: () => import('../views/categories/index.vue'),
+                component: () =>
+                    import ('../views/categories/index.vue'),
                 meta: {
                     title: '分类管理',
                 },
@@ -57,7 +59,8 @@ const routes = [
                     title: 'Page not found',
                     isLogin: false,
                 },
-                component: () => import('../views/NotFound.vue'),
+                component: () =>
+                    import ('../views/NotFound.vue'),
             },
         ],
     },
@@ -67,7 +70,8 @@ const routes = [
         meta: {
             title: '登录',
         },
-        component: () => import('../views/login/index.vue'),
+        component: () =>
+            import ('../views/login/index.vue'),
     },
     // 所有未定义路由，全部重定向到404页
     {

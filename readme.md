@@ -6,7 +6,7 @@
 
 ## 1. 克隆项目
 
-    ```
+    ``` shell
     git clone https://github.com/well-he/bookkeeping.git
     ```
 
